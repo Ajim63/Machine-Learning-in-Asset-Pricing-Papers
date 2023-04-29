@@ -5,7 +5,8 @@ This purpose of this initiative to provide a conmphesive repo for the subject ar
 
 
 ## Asset Return Predication
-| Paper   | Summary | Data   | Issues     |
+
+| **Paper**   | **Summary** | **Data**   | **Issues**     |
 | ---     | ---     |  ---   |   ---      |
 |[Gu, Shihao, Bryan Kelly, and Dacheng Xiu. "Autoencoder asset pricing models." Journal of Econometrics 222, no. 1 (2021): 429-450.](https://www.sciencedirect.com/science/article/pii/S0304407620301998) |Add Summary|  <ul><li> 94 characteristics29 (61 of which are updated annually, 13 are updated quarterly, and 20 are updated monthly) </li> <li> 74 industry dummies corresponding to the first two digits of SIC codes </li> <li> Eight macroeconomic predictors </li> <li> </ul> |
 |[Gu, Shihao, Bryan Kelly, and Dacheng Xiu. "Empirical asset pricing via machine learning." The Review of Financial Studies 33, no. 5 (2020): 2223-2273](https://academic.oup.com/rfs/article/33/5/2223/5758276) |Add Summary|  <ul><li> 94 characteristics29 (61 of which are updated annually, 13 are updated quarterly, and 20 are updated monthly) </li> <li> 74 industry dummies corresponding to the first two digits of SIC codes </li> <li> Eight macroeconomic predictors </li> <li>  $x_{i,t} \otimes c_{i,t}$ Total $94×(8+1)+74=920$</ul> |

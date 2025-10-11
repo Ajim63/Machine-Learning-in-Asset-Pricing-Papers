@@ -14,306 +14,47 @@ This purpose of this initiative to provide a conmphesive repo for the subject ar
 |[Leippold, Markus, Qian Wang, and Wenyu Zhou. "Machine learning in the Chinese stock market." Journal of Financial Economics 145, no. 2 (2022): 64-82](https://www.sciencedirect.com/science/article/pii/S0304405X21003743)  |         |        |            |
 
 
-# Machine Learning in Asset Pricing — Comprehensive Literature Review
+ # Machine Learning and Finance — Literature Review
 
-This page presents a curated collection of academic papers exploring the use of **machine learning** in **asset pricing**, **financial econometrics**, and **market microstructure**.  
-Each section groups papers by research focus, with detailed expandable summaries.
-
-## Table of Contents
-
-- [Factor discovery / representation learning/Latent factor models](#factor-discovery-/-representation-learning/latent-factor-models)
-- [Prediction / forecasting](#prediction-/-forecasting)
-- [SDF estimation / deep learning](#sdf-estimation-/-deep-learning)
-- [Prediction / forecasting (market-specific)](#prediction-/-forecasting-(market-specific))
-- [Alternative data / computer vision (asset pricing application)](#alternative-data-/-computer-vision-(asset-pricing-application))
-- [Prediction / economic restrictions](#prediction-/-economic-restrictions)
-- [Alternative data / NLP](#alternative-data-/-nlp)
-- [Fixed income / prediction](#fixed-income-/-prediction)
-- [Accounting / fraud detection (ML applied)](#accounting-/-fraud-detection-(ml-applied))
-- [Accounting / misstatement detection](#accounting-/-misstatement-detection)
-- [Fixed income / macro-finance](#fixed-income-/-macro-finance)
-- [Prediction / industry-focused methods](#prediction-/-industry-focused-methods)
-- [Macroeconomic expectations / ML](#macroeconomic-expectations-/-ml)
-- [Momentum / deep learning](#momentum-/-deep-learning)
-- [Accounting / NLP](#accounting-/-nlp)
-- [Factor construction / tree-based methods](#factor-construction-/-tree-based-methods)
-- [Alternative data / news NLP](#alternative-data-/-news-nlp)
-- [Alternative data / narrative factors](#alternative-data-/-narrative-factors)
-- [Fundamental analysis / ML](#fundamental-analysis-/-ml)
-- [Human+AI / analyst forecasting](#human+ai-/-analyst-forecasting)
-- [Corporate disclosure / NLP](#corporate-disclosure-/-nlp)
-- [High-frequency / microstructure ML](#high-frequency-/-microstructure-ml)
-- [Structural estimation / deep learning](#structural-estimation-/-deep-learning)
-- [Methodology / inference with ML](#methodology-/-inference-with-ml)
-- [Uncategorized](#uncategorized)
-
----
-
-
+This document provides a structured index of key scholarly papers exploring the intersection of **machine learning**, **asset pricing**, and **financial economics**.  
+Each entry includes a brief overview, data description, limitations, and suggestions for future research.
 
 <style>
-/* --- Clean, professional collapsible design --- */
-details {
+/* --- Professional collapsible styling --- */
+details {{
   background-color: #f8f9fa;
-  border: 1px solid #ddd;
+  border: 1px solid #d1d1d1;
   border-radius: 6px;
-  padding: 0.5em 1em;
-  margin: 0.7em 0 1.2em 0;
-  transition: background-color 0.3s ease;
-}
-details:hover {
-  background-color: #f3f4f6;
-}
-summary {
+  padding: 0.6em 1em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  transition: all 0.3s ease;
+}}
+
+details:hover {{
+  background-color: #f0f0f0;
+}}
+
+summary {{
   font-weight: 600;
+  color: #1a1a1a;
   cursor: pointer;
-  color: #222;
-}
-.content-block {
-  margin-top: 0.4em;
+}}
+
+.content-block {{
+  margin-top: 0.5em;
   color: #333;
   line-height: 1.55;
   font-size: 0.96em;
-}
-hr.section {
+}}
+
+hr.section {{
   border: none;
   height: 1px;
-  background-color: #ccc;
-  margin: 1.5em 0;
-}
-h2 {
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.2em;
-  color: #1a1a1a;
-}
+  background-color: #ddd;
+  margin: 2em 0;
+}}
 </style>
-
-
-## Accounting / NLP
-
-
-<hr class="section">
-
-### [Brown, N. C., Crowley, R. M., & Elliot, W. B. (2019). What are You Saying? Using topic to Detect Financial Misreporting. Journal of Accounting Research.](Wiley / SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2803733)
-**Year:** 2019/2020  **Category:** Accounting / NLP
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Introduces topic-based textual features to detect financial misreporting and shows topic models significantly improve out-of-sample detection performance. Demonstrates text topics add information beyond traditional style and financial features. </p>
-    <p><strong>Data Used:</strong> 10-K filings text, SEC enforcement actions (AAERs), restatements, and financial statement data.</p>
-    <p><strong>Challenges / Limitations:</strong> Topic models capture co-occurrence patterns but may miss nuanced or cleverly disguised language.
-- Label and event-timing uncertainty for misreporting cases complicate evaluation.
-- Language drift over time may require periodic model retraining.</p>
-    <p><strong>Future Research Directions:</strong> Combine topic models with supervised deep-learning classifiers for richer feature sets.
-- Develop time-adaptive topic models to handle language evolution.
-- Evaluate cross-lingual transferability for international filings.</p>
-  </div>
-</details>
-
-
-
-## Accounting / fraud detection (ML applied)
-
-
-<hr class="section">
-
-### [Bao, Ke, Li, Yu, & Zhang. Detecting Accounting Fraud in Publicly Traded U.S. Firms Using a Machine Learning Approach. Journal of Accounting Research (2020).](https://onlinelibrary.wiley.com/doi/full/10.1111/1475-679X.12292)
-**Year:** 2020  **Category:** Accounting / fraud detection (ML applied)
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Uses ML classifiers to detect accounting fraud in US firms, leveraging financial statement features and textual signals; reports improved detection relative to standard benchmarks.</p>
-    <p><strong>Data Used:</strong> Compustat/CRSP financials, audit reports, possibly text of filings; see paper for dataset and labeling procedure.</p>
-    <p><strong>Challenges / Limitations:</strong> Label quality: fraud/misstatement labels are noisy and subject to detection biases.
-- Class imbalance (fraud events are rare) complicates training and evaluation.
-- Potential adverse incentives if algorithms are used operationally without human oversight.</p>
-    <p><strong>Future Research Directions:</strong> - Develop causal/interpretability tools to explain flagged cases to auditors.
-- Use multi-source signals (text, network, alternative data) to improve robustness.
-- Evaluate real-world deployment impacts on audit selection and false-positive costs.</p>
-  </div>
-</details>
-
-
-
-## Accounting / misstatement detection
-
-
-<hr class="section">
-
-### [Bertomeu, Cheynel, Floyd, & Pan. Using machine learning to detect misstatements. Review of Accounting Studies (2020).](https://link.springer.com/article/10.1007/s11142-020-09563-8)
-**Year:** 2020  **Category:** Accounting / misstatement detection
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Applies various ML methods to detect financial misstatements and misreporting, comparing performance to traditional models and highlighting useful features.</p>
-    <p><strong>Data Used:</strong> Financial statement data and enforcement/SEC restatement records; see paper for details.</p>
-    <p><strong>Challenges / Limitations:</strong> - False positives have real costs; need to balance precision vs recall in operational settings.
-- Heterogeneity across firms/industries may reduce generalization of trained models.
-- Regulatory and privacy constraints limit access to rich features in practice.</p>
-    <p><strong>Future Research Directions:</strong> Better calibration and cost-sensitive learning tailored to audit priorities.
-- Cross-firm transfer learning to improve small-sample performance.
-- Integrate explainable AI for audit trail documentation.</p>
-  </div>
-</details>
-
-
-
-## Alternative data / NLP
-
-
-<hr class="section">
-
-### [Azimi, M., & Agrawal, A. Is Positive Sentiment in Corporate Annual Reports Informative? Evidence from Deep Learning. Review of Asset Pricing Studies (2021).](https://doi.org/10.1093/rapstu/raab005 ; SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3258821)
-**Year:** 2021  **Category:** Alternative data / NLP
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Applies deep-learning-based sentiment extraction to 10-K filings and finds both positive and negative sentiments predict abnormal returns and future firm fundamentals around filing dates. Shows finer-grained sentiment measures (vs. simple net-sentiment) contain incremental information. </p>
-    <p><strong>Data Used:</strong> EDGAR 10-K filings for U.S. firms, stock returns around filing dates, and firm fundamentals.</p>
-    <p><strong>Challenges / Limitations:</strong> Text-sentiment models require careful training and can be sensitive to label noise.
-- Filing-based signals can be confounded by concurrent announcements or news.
-- Generalizing across jurisdictions/time requires retraining sentiment models.</p>
-    <p><strong>Future Research Directions:</strong> `- Event-level causal identification strategies (e.g., instrumental variables).
-- Cross-sectional tests across industries and international filings.
-- Release trained models and preprocessing code for reproducibility.  Incorporate multi-modal data (text + earnings calls + management forecasts) for richer signals.
-- Test long-horizon predictive power and economic exploitability after costs.
-- Explore causal mechanisms linking narrative tone to firm fundamentals. </p>
-  </div>
-</details>
-
-
-
-## Alternative data / computer vision (asset pricing application)
-
-
-<hr class="section">
-
-### [Aubry, Mathieu, Roman Kräussl, Gustavo Manso, and Christophe Spaenjers. "Biased auctioneers." The Journal of Finance (2023).](https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.13203)
-**Year:** 2023  **Category:** Alternative data / computer vision (asset pricing application)
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Uses neural-network based image and metadata analysis to predict art auction prices and documents systematic auctioneer biases in pricing. Combines visual and non-visual features.</p>
-    <p><strong>Data Used:</strong> Proprietary data from Blouin Art Sales Index, has information on buyins and data from 2008 to 2015 (2015 as the test set). 1,2 mil lots, 130k individual artists. Has inmformation about the artist, the artwork, the auction. The amounts are converted to USD using a spot rate at the time of sale and also a high quality image of the artwork for analysis.</p>
-    <p><strong>Challenges / Limitations:</strong> External validity: art markets are niche and results may not generalize to other asset classes.
-- Image-based valuation models can be sensitive to sample selection and feature extraction choices.
-- Causality: disentangling information effects vs. behavioral reactions to published estimates.</p>
-    <p><strong>Future Research Directions:</strong> - Explore ML valuation feedback loops across other illiquid markets (collectibles, real estate).
-- Use experimental settings to test causal mechanisms behind auctioneer bias.
-- Combine alternative data (provenance, exhibition history) with image features.</p>
-  </div>
-</details>
-
-
-
-## Alternative data / narrative factors
-
-
-<hr class="section">
-
-### [Bybee, L., Kelly, B., Su, Y. (2022). Narrative Asset Pricing: Interpretable Systematic Risk Factors from News Text. SSRN.](https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.13377)
-**Year:** 2022/2023  **Category:** Alternative data / narrative factors
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Extracts narrative factors from WSJ news text using LDA + IPCA + group lasso and shows these news-derived factors have strong pricing performance and high out-of-sample Sharpe ratios. Shows that news attention topics track macroeconomic activity and help forecast aggregate stock market returns.</p>
-    <p><strong>Data Used:</strong> Wall Street Journal text, returns on anomaly portfolios, macro variables.</p>
-    <p><strong>Challenges / Limitations:</strong> Dependence on a single news source (WSJ) and LDA hyperparameters.
-- Risk of overfitting when selecting narrative topics.
-- Economic interpretation beyond correlations requires care.</p>
-    <p><strong>Future Research Directions:</strong>  Cross-validate across news sources and years.
-- Link narrative factors more tightly to macro-investment opportunities.</p>
-  </div>
-</details>
-
-
-
-## Alternative data / news NLP
-
-
-<hr class="section">
-
-### [Bybee, L., Kelly, B., Manela, A. (2021). Business News and Business Cycles](SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3446225 ; Journal link: https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.13377)
-**Year:** 2024  **Category:** Alternative data / news NLP
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Constructs topical measures from Wall Street Journal business news and shows that news attention topics track macroeconomic activity and help forecast aggregate stock market returns.</p>
-    <p><strong>Data Used:</strong> Full text of Wall Street Journal articles (1984‚Äì2017), macro series, and market returns.</p>
-    <p><strong>Challenges / Limitations:</strong> - News coverage may itself be endogenous to economic events.
-- Topic modeling choices and coverage biases influence results.
-- Limited to WSJ; generalizability to other media uncertain.</p>
-    <p><strong>Future Research Directions:</strong> Apply method to broader news sources and international outlets.
-- Investigate causal channels between news narratives and real economic activity.</p>
-  </div>
-</details>
-
-
-
-## Corporate disclosure / NLP
-
-
-<hr class="section">
-
-### [Cao, S. S., Jiang, W., Yang, B., & Zhang, A. (2020). How to Talk When a Machine is Listening: Corporate Disclosure in the Age of AI. SSRN.](https://academic.oup.com/rfs/article-abstract/36/9/3603/7087110)
-**Year:** 2020  **Category:** Corporate disclosure / NLP
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Studies how corporate disclosure strategies change when firms anticipate machine-based text processing; analyzes disclosure wording and informativeness.</p>
-    <p><strong>Data Used:</strong> Corporate filings and disclosure texts, market reactions.</p>
-    <p><strong>Challenges / Limitations:</strong> - Measuring firms' anticipatory behavior is difficult and may be confounded by other disclosure incentives.
-- NLP model evolution over time affects measured behavior.</p>
-    <p><strong>Future Research Directions:</strong> Longitudinal analyses as NLP models change.
-- Experimental approaches to detect strategic disclosure.</p>
-  </div>
-</details>
-
-
-
-## Factor construction / tree-based methods
-
-
-<hr class="section">
-
-### [Bryzgalova, S., Pelger, M., & Zhu, J. (2020). Forest Through the Trees: Building Cross-Sections of Stock Returns. SSRN / Journal.](Large set of firm characteristics, CRSP/Compustat; uses tree-based methods to construct basis assets.)
-**Year:** 2020  **Category:** Factor construction / tree-based methods
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Proposes a decision-tree-based method to construct a compact set of basis assets (test assets) from a large set of characteristics, improving cross-sectional modeling and interpretability. Combines ensemble tree approaches with financial-sorting intuition to produce robust cross-sections. </p>
-    <p><strong>Data Used:</strong> Large set of firm characteristics, CRSP/Compustat; uses tree-based methods to construct basis assets.</p>
-    <p><strong>Challenges / Limitations:</strong> Construction of basis assets depends on algorithm choices and hyperparameters.
-- May be sensitive to correlated characteristics and changing economic regimes.
-- Translating constructed basis assets into economically meaningful factors requires post-hoc analysis.</p>
-    <p><strong>Future Research Directions:</strong> - Automate economic labeling of basis assets via post-hoc interpretability methods.
-- Apply approach to multi-asset cross-sections (bonds, options).
-- Study stability of basis assets across subsamples and crises.</p>
-  </div>
-</details>
-
-
-
-## Factor discovery / representation learning/Latent factor models
-
 
 <hr class="section">
 
@@ -343,230 +84,6 @@ Median imputation throughout the dataset so they have the full range of 30000 co
 </details>
 
 
-
-## Fixed income / macro-finance
-
-
-<hr class="section">
-
-### [Bianchi, Daniele, Matthias Büchner, and Andrea Tamoni. "Bond risk premiums with machine learning." The Review of Financial Studies 34, no. 2 (2021): 1046-1089.](https://academic.oup.com/rfs/article-abstract/34/2/1046/5843806?redirectedFrom=fulltext)
-**Year:** 2020  **Category:** Fixed income / macro-finance
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Uses ML tools (extreme trees, NNs) to model bond risk premia and documents improved prediction and economic gains relative to linear models. Highlights macro-financial predictors and nonlinear interactions important for bond premia.</p>
-    <p><strong>Data Used:</strong> Bond yields, macro variables, and bond-level characteristics (see paper for exact dataset).</p>
-    <p><strong>Challenges / Limitations:</strong> - Bond markets' low-frequency and illiquidity challenge model training and evaluation.
-- Interpreting macro-driven nonlinear patterns in economic terms is non-trivial.
-- Out-of-sample stability in stressed environments needs further testing.</p>
-    <p><strong>Future Research Directions:</strong> - Integrate term-structure theory constraints into ML algorithms for better interpretability.
-- Test ML models across different bond sectors (sovereign, municipal, corporate).
-- Assess performance during crisis episodes and regimes.</p>
-  </div>
-</details>
-
-
-
-## Fixed income / prediction
-
-
-<hr class="section">
-
-### [Bali, Goyal, Huang, Jiang, & Wen. The Cross-Sectional Pricing of Corporate Bonds Using Big Data and Machine Learning. (2020).](Working paper / SSRN / SFI links (see paper): https://ideas.repec.org/p/chf/rpseri/rp20110.html ; SSRN entry)
-**Year:** 2020  **Category:** Fixed income / prediction
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Applies ML to predict cross-sectional corporate bond returns using a large set of equity and bond characteristics and finds ML methods improve out-of-sample predictive power; imposing economic structure (Merton) helps.</p>
-    <p><strong>Data Used:</strong> TRACE transaction-level data for bonds (US), firm equity characteristics, bond fundamentals (see paper for details).</p>
-    <p><strong>Challenges / Limitations:</strong> - Fixed-coupon securities have special features (callability, illiquidity) requiring careful modeling.
-- Corporate bond datasets are noisier and sparser than equities -> potential overfitting.
-- Transaction costs and dealer intermediation dynamics complicate implementability.</p>
-    <p><strong>Future Research Directions:</strong> - Combine structural credit models (Merton-style) with ML for improved interpretability.
-- Incorporate dealer-level microstructure and liquidity supply measures.
-- Test international bond markets and municipal/corporate subsegments.</p>
-  </div>
-</details>
-
-
-
-## Fundamental analysis / ML
-
-
-<hr class="section">
-
-### [Cao, K., & You, H. (2020). Fundamental Analysis Via Machine Learning. SSRN / journal.](https://www.tandfonline.com/doi/full/10.1080/0015198X.2024.2313692)
-**Year:** 2024  **Category:** Fundamental analysis / ML
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Investigates ML methods for forecasting corporate earnings and fundamental signals; finds ML improves forecast accuracy versus linear baselines when properly tuned.</p>
-    <p><strong>Data Used:</strong> Firm financials, historical earnings, possibly textual disclosures; details in paper.</p>
-    <p><strong>Challenges / Limitations:</strong> Data snooping in feature choice for fundamentals forecasting.
-- Model sensitivity to missing financial history and outliers.
-- Need for real-time applicability and vintage data.</p>
-    <p><strong>Future Research Directions:</strong> Evaluate performance in real-time vintages and international settings.
-- Combine tabular ML with textual disclosures for improved forecasts.</p>
-  </div>
-</details>
-
-
-
-## High-frequency / microstructure ML
-
-
-<hr class="section">
-
-### [Chaudhry, A., & Oh, S. (2020). High-Frequency Expectations from Asset Prices: A Machine Learning Approach. SSRN.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3694019)
-**Year:** 2020  **Category:** High-frequency / microstructure ML
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Uses ML to extract high-frequency expectations embedded in asset prices, leveraging intraday data and novel feature engineering.</p>
-    <p><strong>Data Used:</strong> High-frequency intraday price and order-book data (see paper).</p>
-    <p><strong>Challenges / Limitations:</strong> Microstructure noise and data-cleaning are crucial and challenging.
-- Overfitting to intraday patterns that are ephemeral.
-- Scalability and latency in real-time systems.</p>
-    <p><strong>Future Research Directions:</strong> Robustness to microstructure frictions and different sampling frequencies.
-- Integration with execution-aware strategies.</p>
-  </div>
-</details>
-
-
-
-## Human+AI / analyst forecasting
-
-
-<hr class="section">
-
-### [Cao, S. S., Jiang, W., Wang, J. L., & Yang, B. (2021). From Man vs. Machine to Man + Machine: The Art and AI of Stock Analyses. SSRN.](https://www.sciencedirect.com/science/article/abs/pii/S0304405X24001338)
-**Year:** 2021  **Category:** Human+AI / analyst forecasting
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Builds an AI analyst for stock analysis and shows a 'man+machine' hybrid often outperforms either humans or machines alone, reducing extreme errors and improving robustness.</p>
-    <p><strong>Data Used:</strong> Corporate disclosures, analyst reports, market data; see paper appendix.</p>
-    <p><strong>Challenges / Limitations:</strong> Generalizability across firm types and rare-event settings.
-- Human-in-the-loop implementation costs and latency.
-- Potential overfitting to historical analyst behavior.</p>
-    <p><strong>Future Research Directions:</strong> Field experiments integrating AI assistants with real analysts.
-- Study of human-AI interaction designs for investment decisions.</p>
-  </div>
-</details>
-
-
-
-## Macroeconomic expectations / ML
-
-
-<hr class="section">
-
-### [Bianchi, F., Ludvigson, S. C., & Ma, S. (2020). Belief Distortions and Macroeconomic Fluctuations. SSRN / NBER / AER.](https://www.aeaweb.org/articles?id=10.1257/aer.20201713)
-**Year:** 2020/2022  **Category:** Macroeconomic expectations / ML
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Combines survey data with ML to estimate time-varying belief distortions in professional forecasts and studies their macroeconomic consequences. Finds sizable distortions and shows they affect macro fluctuations and forecast errors.</p>
-    <p><strong>Data Used:</strong> Survey expectation data, macroeconomic time series, and asset returns (see paper appendix).</p>
-    <p><strong>Challenges / Limitations:</strong> - Identification: separating true belief distortions from model misspecification is delicate.
-- Dependence on survey construction and sample coverage for external validity.
-- Interpreting ML-derived distortions in structural macro models requires care.</p>
-    <p><strong>Future Research Directions:</strong> Embed estimated distortion processes in structural DSGE models for policy analysis.
-- Apply methods to cross-country survey panels to study heterogeneity.
-- Explore real-time predictive uses for policy and asset allocation.</p>
-  </div>
-</details>
-
-
-
-## Methodology / inference with ML
-
-
-<hr class="section">
-
-### [Chernozhukov, V., Chetverikov, D., Demirer, M., Duflo, E., Hansen, C., Newey, W., & Robins, J. (2018). Double/debiased machine learning for treatment and structural parameters. Econometrics Journal.](Journal: https://academic.oup.com/ectj/article/21/1/C1/5052706 ; arXiv/SSRN available.)
-**Year:** 2018  **Category:** Methodology / inference with ML
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Introduces the Double/Debiased Machine Learning framework to obtain valid inference on low-dimensional parameters in the presence of high-dimensional nuisance functions estimated by ML methods.</p>
-    <p><strong>Data Used:</strong> Methodological paper (applies to many datasets; theoretical and empirical examples included).</p>
-    <p><strong>Challenges / Limitations:</strong> - Requires regularity conditions and sample-splitting; finite-sample performance can vary.
-- Implementation choices (cross-fitting folds, ML learners) affect results.</p>
-    <p><strong>Future Research Directions:</strong>  Better finite-sample corrections and guidance for practitioner choices.
-- Extend frameworks to time-series dependence common in finance.</p>
-  </div>
-</details>
-
-
-
-## Momentum / deep learning
-
-
-<hr class="section">
-
-### [Borisenko, D. (2019). Dissecting Momentum: We Need to Go Deeper. SSRN.](SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3424793)
-**Year:** 2019  **Category:** Momentum / deep learning
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Argues that simple momentum strategies mask richer dynamics: deeper, state-dependent, and industry-specific drivers matter. Suggests using richer ML-style partitioning to uncover the conditional structure of momentum. </p>
-    <p><strong>Data Used:</strong> U.S. stock returns and momentum-related characteristics (see SSRN paper).</p>
-    <p><strong>Challenges / Limitations:</strong> - Momentum is sensitive to market regimes; state-dependence complicates out-of-sample robustness.
-- Transaction costs and crowding are important for momentum implementations.
-- ML partitioning can overfit if not constrained by economic structure.</p>
-    <p><strong>Future Research Directions:</strong>  Merge regime detection with momentum strategies to adapt to crash risk.
-- Use interpretable ML to separate information-driven vs. behavioral momentum.
-- Evaluate cross-country consistency of dissected momentum drivers.</p>
-  </div>
-</details>
-
-
-
-## Prediction / economic restrictions
-
-
-<hr class="section">
-
-### [Avramov, Cheng, & Metzker. Machine Learning versus Economic Restrictions: Evidence from Stock Return Predictability. Management Science (2023).](SSRN / Management Science: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3450322 ; DOI via Management Science)
-**Year:** 2023  **Category:** Prediction / economic restrictions
-
-
-<details class="paper-details">
-  <summary><strong>View Details</strong></summary>
-  <div class="content-block">
-    <p><strong>Summary:</strong> Reassesses ML-based predictability claims and shows that imposing economically motivated restrictions (exclude microcaps, distressed stocks, apply trading-cost filters) substantially reduces reported ML profitability. Highlights the importance of realistic economic constraints when evaluating ML strategies. Compares unconstrained ML methods against models with economic restrictions. Finds ML picks up profit mainly from difficult-to-arbitrage stocks and that realistic frictions attenuate economic gains.</p>
-    <p><strong>Data Used:</strong> U.S. stock returns and characteristics; check paper for full data appendix.</p>
-    <p><strong>Challenges / Limitations:</strong> Demonstrates sensitivity to sample selection—raises questions about prior ML economic gains.
-- Quantifying realistic trading costs and market impact remains challenging.
-- Findings depend on choices around universes (microcaps, penny stocks) and data snooping risks.</p>
-    <p><strong>Future Research Directions:</strong> Systematically integrate limits-to-arbitrage and market impact into ML evaluation pipelines.
-- Develop standardized robustness checks (economic restrictions) for ML-based asset-pricing studies.
-- Reexamine published ML results under matched economic constraint protocols.</p>
-  </div>
-</details>
-
-
-
-## Prediction / forecasting
-
-
 <hr class="section">
 
 ### [Gu, Shihao, Bryan Kelly, and Dacheng Xiu. Empirical asset pricing via machine learning. Review of Financial Studies (2020).](https://doi.org/10.1093/rfs/hhaa009 ; SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3159577)
@@ -594,8 +111,25 @@ which the individual excess returns are calculated.</p>
 </details>
 
 
+<hr class="section">
 
-## Prediction / forecasting (market-specific)
+### [Chen, Luyang, Markus Pelger, and Jason Zhu. Deep learning in asset pricing. Management Science (2023).](https://doi.org/10.1287/mnsc.2023.4695 ; arXiv: https://arxiv.org/abs/1904.00745)
+**Year:** 2023  **Category:** SDF estimation / deep learning
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Estimates a stochastic discount factor (SDF) with deep neural networks using a no-arbitrage loss and an adversarial construction of test assets. Proposes a deep neural-network-based approach to estimate asset-pricing models that enforces no-arbitrage and uses adversarially chosen test assets. The method extracts latent economic states from macro variables and delivers improved out-of-sample pricing and Sharpe ratios compared to benchmarks.  </p>
+    <p><strong>Data Used:</strong> Firm-level returns (CRSP), Compustat, macroeconomic time series; constructs test assets via adversarial selection.</p>
+    <p><strong>Challenges / Limitations:</strong> - Complex training objectives (no-arbitrage plus adversarial tasks) can be sensitive to hyperparameters.
+- Interpretability of deep networks remains limited; mapping to economic states is empirical rather than structural.
+- Computational intensity and reproducibility concerns for large-scale implementations.</p>
+    <p><strong>Future Research Directions:</strong> Develop diagnostics that connect learned states to macroeconomic fundamentals.
+- Simplify/adapt the adversarial testing procedure for robust application across markets.
+- Extend framework to multi-period choices and general equilibrium settings.</p>
+  </div>
+</details>
 
 
 <hr class="section">
@@ -619,8 +153,153 @@ which the individual excess returns are calculated.</p>
 </details>
 
 
+<hr class="section">
 
-## Prediction / industry-focused methods
+### [Aubry, Mathieu, Roman Kräussl, Gustavo Manso, and Christophe Spaenjers. "Biased auctioneers." The Journal of Finance (2023).](https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.13203)
+**Year:** 2023  **Category:** Alternative data / computer vision (asset pricing application)
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Uses neural-network based image and metadata analysis to predict art auction prices and documents systematic auctioneer biases in pricing. Combines visual and non-visual features.</p>
+    <p><strong>Data Used:</strong> Proprietary data from Blouin Art Sales Index, has information on buyins and data from 2008 to 2015 (2015 as the test set). 1,2 mil lots, 130k individual artists. Has inmformation about the artist, the artwork, the auction. The amounts are converted to USD using a spot rate at the time of sale and also a high quality image of the artwork for analysis.</p>
+    <p><strong>Challenges / Limitations:</strong> External validity: art markets are niche and results may not generalize to other asset classes.
+- Image-based valuation models can be sensitive to sample selection and feature extraction choices.
+- Causality: disentangling information effects vs. behavioral reactions to published estimates.</p>
+    <p><strong>Future Research Directions:</strong> - Explore ML valuation feedback loops across other illiquid markets (collectibles, real estate).
+- Use experimental settings to test causal mechanisms behind auctioneer bias.
+- Combine alternative data (provenance, exhibition history) with image features.</p>
+  </div>
+</details>
+
+
+<hr class="section">
+
+### [Avramov, Cheng, & Metzker. Machine Learning versus Economic Restrictions: Evidence from Stock Return Predictability. Management Science (2023).](SSRN / Management Science: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3450322 ; DOI via Management Science)
+**Year:** 2023  **Category:** Prediction / economic restrictions
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Reassesses ML-based predictability claims and shows that imposing economically motivated restrictions (exclude microcaps, distressed stocks, apply trading-cost filters) substantially reduces reported ML profitability. Highlights the importance of realistic economic constraints when evaluating ML strategies. Compares unconstrained ML methods against models with economic restrictions. Finds ML picks up profit mainly from difficult-to-arbitrage stocks and that realistic frictions attenuate economic gains.</p>
+    <p><strong>Data Used:</strong> U.S. stock returns and characteristics; check paper for full data appendix.</p>
+    <p><strong>Challenges / Limitations:</strong> Demonstrates sensitivity to sample selection—raises questions about prior ML economic gains.
+- Quantifying realistic trading costs and market impact remains challenging.
+- Findings depend on choices around universes (microcaps, penny stocks) and data snooping risks.</p>
+    <p><strong>Future Research Directions:</strong> Systematically integrate limits-to-arbitrage and market impact into ML evaluation pipelines.
+- Develop standardized robustness checks (economic restrictions) for ML-based asset-pricing studies.
+- Reexamine published ML results under matched economic constraint protocols.</p>
+  </div>
+</details>
+
+
+<hr class="section">
+
+### [Azimi, M., & Agrawal, A. Is Positive Sentiment in Corporate Annual Reports Informative? Evidence from Deep Learning. Review of Asset Pricing Studies (2021).](https://doi.org/10.1093/rapstu/raab005 ; SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3258821)
+**Year:** 2021  **Category:** Alternative data / NLP
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Applies deep-learning-based sentiment extraction to 10-K filings and finds both positive and negative sentiments predict abnormal returns and future firm fundamentals around filing dates. Shows finer-grained sentiment measures (vs. simple net-sentiment) contain incremental information. </p>
+    <p><strong>Data Used:</strong> EDGAR 10-K filings for U.S. firms, stock returns around filing dates, and firm fundamentals.</p>
+    <p><strong>Challenges / Limitations:</strong> Text-sentiment models require careful training and can be sensitive to label noise.
+- Filing-based signals can be confounded by concurrent announcements or news.
+- Generalizing across jurisdictions/time requires retraining sentiment models.</p>
+    <p><strong>Future Research Directions:</strong> `- Event-level causal identification strategies (e.g., instrumental variables).
+- Cross-sectional tests across industries and international filings.
+- Release trained models and preprocessing code for reproducibility.  Incorporate multi-modal data (text + earnings calls + management forecasts) for richer signals.
+- Test long-horizon predictive power and economic exploitability after costs.
+- Explore causal mechanisms linking narrative tone to firm fundamentals. </p>
+  </div>
+</details>
+
+
+<hr class="section">
+
+### [Bali, Goyal, Huang, Jiang, & Wen. The Cross-Sectional Pricing of Corporate Bonds Using Big Data and Machine Learning. (2020).](Working paper / SSRN / SFI links (see paper): https://ideas.repec.org/p/chf/rpseri/rp20110.html ; SSRN entry)
+**Year:** 2020  **Category:** Fixed income / prediction
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Applies ML to predict cross-sectional corporate bond returns using a large set of equity and bond characteristics and finds ML methods improve out-of-sample predictive power; imposing economic structure (Merton) helps.</p>
+    <p><strong>Data Used:</strong> TRACE transaction-level data for bonds (US), firm equity characteristics, bond fundamentals (see paper for details).</p>
+    <p><strong>Challenges / Limitations:</strong> - Fixed-coupon securities have special features (callability, illiquidity) requiring careful modeling.
+- Corporate bond datasets are noisier and sparser than equities -> potential overfitting.
+- Transaction costs and dealer intermediation dynamics complicate implementability.</p>
+    <p><strong>Future Research Directions:</strong> - Combine structural credit models (Merton-style) with ML for improved interpretability.
+- Incorporate dealer-level microstructure and liquidity supply measures.
+- Test international bond markets and municipal/corporate subsegments.</p>
+  </div>
+</details>
+
+
+<hr class="section">
+
+### [Bao, Ke, Li, Yu, & Zhang. Detecting Accounting Fraud in Publicly Traded U.S. Firms Using a Machine Learning Approach. Journal of Accounting Research (2020).](https://onlinelibrary.wiley.com/doi/full/10.1111/1475-679X.12292)
+**Year:** 2020  **Category:** Accounting / fraud detection (ML applied)
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Uses ML classifiers to detect accounting fraud in US firms, leveraging financial statement features and textual signals; reports improved detection relative to standard benchmarks.</p>
+    <p><strong>Data Used:</strong> Compustat/CRSP financials, audit reports, possibly text of filings; see paper for dataset and labeling procedure.</p>
+    <p><strong>Challenges / Limitations:</strong> Label quality: fraud/misstatement labels are noisy and subject to detection biases.
+- Class imbalance (fraud events are rare) complicates training and evaluation.
+- Potential adverse incentives if algorithms are used operationally without human oversight.</p>
+    <p><strong>Future Research Directions:</strong> - Develop causal/interpretability tools to explain flagged cases to auditors.
+- Use multi-source signals (text, network, alternative data) to improve robustness.
+- Evaluate real-world deployment impacts on audit selection and false-positive costs.</p>
+  </div>
+</details>
+
+
+<hr class="section">
+
+### [Bertomeu, Cheynel, Floyd, & Pan. Using machine learning to detect misstatements. Review of Accounting Studies (2020).](https://link.springer.com/article/10.1007/s11142-020-09563-8)
+**Year:** 2020  **Category:** Accounting / misstatement detection
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Applies various ML methods to detect financial misstatements and misreporting, comparing performance to traditional models and highlighting useful features.</p>
+    <p><strong>Data Used:</strong> Financial statement data and enforcement/SEC restatement records; see paper for details.</p>
+    <p><strong>Challenges / Limitations:</strong> - False positives have real costs; need to balance precision vs recall in operational settings.
+- Heterogeneity across firms/industries may reduce generalization of trained models.
+- Regulatory and privacy constraints limit access to rich features in practice.</p>
+    <p><strong>Future Research Directions:</strong> Better calibration and cost-sensitive learning tailored to audit priorities.
+- Cross-firm transfer learning to improve small-sample performance.
+- Integrate explainable AI for audit trail documentation.</p>
+  </div>
+</details>
+
+
+<hr class="section">
+
+### [Bianchi, Daniele, Matthias Büchner, and Andrea Tamoni. "Bond risk premiums with machine learning." The Review of Financial Studies 34, no. 2 (2021): 1046-1089.](https://academic.oup.com/rfs/article-abstract/34/2/1046/5843806?redirectedFrom=fulltext)
+**Year:** 2020  **Category:** Fixed income / macro-finance
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Uses ML tools (extreme trees, NNs) to model bond risk premia and documents improved prediction and economic gains relative to linear models. Highlights macro-financial predictors and nonlinear interactions important for bond premia.</p>
+    <p><strong>Data Used:</strong> Bond yields, macro variables, and bond-level characteristics (see paper for exact dataset).</p>
+    <p><strong>Challenges / Limitations:</strong> - Bond markets' low-frequency and illiquidity challenge model training and evaluation.
+- Interpreting macro-driven nonlinear patterns in economic terms is non-trivial.
+- Out-of-sample stability in stressed environments needs further testing.</p>
+    <p><strong>Future Research Directions:</strong> - Integrate term-structure theory constraints into ML algorithms for better interpretability.
+- Test ML models across different bond sectors (sovereign, municipal, corporate).
+- Assess performance during crisis episodes and regimes.</p>
+  </div>
+</details>
 
 
 <hr class="section">
@@ -644,33 +323,207 @@ which the individual excess returns are calculated.</p>
 </details>
 
 
-
-## SDF estimation / deep learning
-
-
 <hr class="section">
 
-### [Chen, Luyang, Markus Pelger, and Jason Zhu. Deep learning in asset pricing. Management Science (2023).](https://doi.org/10.1287/mnsc.2023.4695 ; arXiv: https://arxiv.org/abs/1904.00745)
-**Year:** 2023  **Category:** SDF estimation / deep learning
+### [Bianchi, F., Ludvigson, S. C., & Ma, S. (2020). Belief Distortions and Macroeconomic Fluctuations. SSRN / NBER / AER.](https://www.aeaweb.org/articles?id=10.1257/aer.20201713)
+**Year:** 2020/2022  **Category:** Macroeconomic expectations / ML
 
 
 <details class="paper-details">
   <summary><strong>View Details</strong></summary>
   <div class="content-block">
-    <p><strong>Summary:</strong> Estimates a stochastic discount factor (SDF) with deep neural networks using a no-arbitrage loss and an adversarial construction of test assets. Proposes a deep neural-network-based approach to estimate asset-pricing models that enforces no-arbitrage and uses adversarially chosen test assets. The method extracts latent economic states from macro variables and delivers improved out-of-sample pricing and Sharpe ratios compared to benchmarks.  </p>
-    <p><strong>Data Used:</strong> Firm-level returns (CRSP), Compustat, macroeconomic time series; constructs test assets via adversarial selection.</p>
-    <p><strong>Challenges / Limitations:</strong> - Complex training objectives (no-arbitrage plus adversarial tasks) can be sensitive to hyperparameters.
-- Interpretability of deep networks remains limited; mapping to economic states is empirical rather than structural.
-- Computational intensity and reproducibility concerns for large-scale implementations.</p>
-    <p><strong>Future Research Directions:</strong> Develop diagnostics that connect learned states to macroeconomic fundamentals.
-- Simplify/adapt the adversarial testing procedure for robust application across markets.
-- Extend framework to multi-period choices and general equilibrium settings.</p>
+    <p><strong>Summary:</strong> Combines survey data with ML to estimate time-varying belief distortions in professional forecasts and studies their macroeconomic consequences. Finds sizable distortions and shows they affect macro fluctuations and forecast errors.</p>
+    <p><strong>Data Used:</strong> Survey expectation data, macroeconomic time series, and asset returns (see paper appendix).</p>
+    <p><strong>Challenges / Limitations:</strong> - Identification: separating true belief distortions from model misspecification is delicate.
+- Dependence on survey construction and sample coverage for external validity.
+- Interpreting ML-derived distortions in structural macro models requires care.</p>
+    <p><strong>Future Research Directions:</strong> Embed estimated distortion processes in structural DSGE models for policy analysis.
+- Apply methods to cross-country survey panels to study heterogeneity.
+- Explore real-time predictive uses for policy and asset allocation.</p>
   </div>
 </details>
 
 
+<hr class="section">
 
-## Structural estimation / deep learning
+### [Borisenko, D. (2019). Dissecting Momentum: We Need to Go Deeper. SSRN.](SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3424793)
+**Year:** 2019  **Category:** Momentum / deep learning
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Argues that simple momentum strategies mask richer dynamics: deeper, state-dependent, and industry-specific drivers matter. Suggests using richer ML-style partitioning to uncover the conditional structure of momentum. </p>
+    <p><strong>Data Used:</strong> U.S. stock returns and momentum-related characteristics (see SSRN paper).</p>
+    <p><strong>Challenges / Limitations:</strong> - Momentum is sensitive to market regimes; state-dependence complicates out-of-sample robustness.
+- Transaction costs and crowding are important for momentum implementations.
+- ML partitioning can overfit if not constrained by economic structure.</p>
+    <p><strong>Future Research Directions:</strong>  Merge regime detection with momentum strategies to adapt to crash risk.
+- Use interpretable ML to separate information-driven vs. behavioral momentum.
+- Evaluate cross-country consistency of dissected momentum drivers.</p>
+  </div>
+</details>
+
+
+<hr class="section">
+
+### [Brown, N. C., Crowley, R. M., & Elliot, W. B. (2019). What are You Saying? Using topic to Detect Financial Misreporting. Journal of Accounting Research.](Wiley / SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2803733)
+**Year:** 2019/2020  **Category:** Accounting / NLP
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Introduces topic-based textual features to detect financial misreporting and shows topic models significantly improve out-of-sample detection performance. Demonstrates text topics add information beyond traditional style and financial features. </p>
+    <p><strong>Data Used:</strong> 10-K filings text, SEC enforcement actions (AAERs), restatements, and financial statement data.</p>
+    <p><strong>Challenges / Limitations:</strong> Topic models capture co-occurrence patterns but may miss nuanced or cleverly disguised language.
+- Label and event-timing uncertainty for misreporting cases complicate evaluation.
+- Language drift over time may require periodic model retraining.</p>
+    <p><strong>Future Research Directions:</strong> Combine topic models with supervised deep-learning classifiers for richer feature sets.
+- Develop time-adaptive topic models to handle language evolution.
+- Evaluate cross-lingual transferability for international filings.</p>
+  </div>
+</details>
+
+
+<hr class="section">
+
+### [Bryzgalova, S., Pelger, M., & Zhu, J. (2020). Forest Through the Trees: Building Cross-Sections of Stock Returns. SSRN / Journal.](Large set of firm characteristics, CRSP/Compustat; uses tree-based methods to construct basis assets.)
+**Year:** 2020  **Category:** Factor construction / tree-based methods
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Proposes a decision-tree-based method to construct a compact set of basis assets (test assets) from a large set of characteristics, improving cross-sectional modeling and interpretability. Combines ensemble tree approaches with financial-sorting intuition to produce robust cross-sections. </p>
+    <p><strong>Data Used:</strong> Large set of firm characteristics, CRSP/Compustat; uses tree-based methods to construct basis assets.</p>
+    <p><strong>Challenges / Limitations:</strong> Construction of basis assets depends on algorithm choices and hyperparameters.
+- May be sensitive to correlated characteristics and changing economic regimes.
+- Translating constructed basis assets into economically meaningful factors requires post-hoc analysis.</p>
+    <p><strong>Future Research Directions:</strong> - Automate economic labeling of basis assets via post-hoc interpretability methods.
+- Apply approach to multi-asset cross-sections (bonds, options).
+- Study stability of basis assets across subsamples and crises.</p>
+  </div>
+</details>
+
+
+<hr class="section">
+
+### [Bybee, L., Kelly, B., Manela, A. (2021). Business News and Business Cycles](SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3446225 ; Journal link: https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.13377)
+**Year:** 2024  **Category:** Alternative data / news NLP
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Constructs topical measures from Wall Street Journal business news and shows that news attention topics track macroeconomic activity and help forecast aggregate stock market returns.</p>
+    <p><strong>Data Used:</strong> Full text of Wall Street Journal articles (1984‚Äì2017), macro series, and market returns.</p>
+    <p><strong>Challenges / Limitations:</strong> - News coverage may itself be endogenous to economic events.
+- Topic modeling choices and coverage biases influence results.
+- Limited to WSJ; generalizability to other media uncertain.</p>
+    <p><strong>Future Research Directions:</strong> Apply method to broader news sources and international outlets.
+- Investigate causal channels between news narratives and real economic activity.</p>
+  </div>
+</details>
+
+
+<hr class="section">
+
+### [Bybee, L., Kelly, B., Su, Y. (2022). Narrative Asset Pricing: Interpretable Systematic Risk Factors from News Text. SSRN.](https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.13377)
+**Year:** 2022/2023  **Category:** Alternative data / narrative factors
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Extracts narrative factors from WSJ news text using LDA + IPCA + group lasso and shows these news-derived factors have strong pricing performance and high out-of-sample Sharpe ratios. Shows that news attention topics track macroeconomic activity and help forecast aggregate stock market returns.</p>
+    <p><strong>Data Used:</strong> Wall Street Journal text, returns on anomaly portfolios, macro variables.</p>
+    <p><strong>Challenges / Limitations:</strong> Dependence on a single news source (WSJ) and LDA hyperparameters.
+- Risk of overfitting when selecting narrative topics.
+- Economic interpretation beyond correlations requires care.</p>
+    <p><strong>Future Research Directions:</strong>  Cross-validate across news sources and years.
+- Link narrative factors more tightly to macro-investment opportunities.</p>
+  </div>
+</details>
+
+
+<hr class="section">
+
+### [Cao, K., & You, H. (2020). Fundamental Analysis Via Machine Learning. SSRN / journal.](https://www.tandfonline.com/doi/full/10.1080/0015198X.2024.2313692)
+**Year:** 2024  **Category:** Fundamental analysis / ML
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Investigates ML methods for forecasting corporate earnings and fundamental signals; finds ML improves forecast accuracy versus linear baselines when properly tuned.</p>
+    <p><strong>Data Used:</strong> Firm financials, historical earnings, possibly textual disclosures; details in paper.</p>
+    <p><strong>Challenges / Limitations:</strong> Data snooping in feature choice for fundamentals forecasting.
+- Model sensitivity to missing financial history and outliers.
+- Need for real-time applicability and vintage data.</p>
+    <p><strong>Future Research Directions:</strong> Evaluate performance in real-time vintages and international settings.
+- Combine tabular ML with textual disclosures for improved forecasts.</p>
+  </div>
+</details>
+
+
+<hr class="section">
+
+### [Cao, S. S., Jiang, W., Wang, J. L., & Yang, B. (2021). From Man vs. Machine to Man + Machine: The Art and AI of Stock Analyses. SSRN.](https://www.sciencedirect.com/science/article/abs/pii/S0304405X24001338)
+**Year:** 2021  **Category:** Human+AI / analyst forecasting
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Builds an AI analyst for stock analysis and shows a 'man+machine' hybrid often outperforms either humans or machines alone, reducing extreme errors and improving robustness.</p>
+    <p><strong>Data Used:</strong> Corporate disclosures, analyst reports, market data; see paper appendix.</p>
+    <p><strong>Challenges / Limitations:</strong> Generalizability across firm types and rare-event settings.
+- Human-in-the-loop implementation costs and latency.
+- Potential overfitting to historical analyst behavior.</p>
+    <p><strong>Future Research Directions:</strong> Field experiments integrating AI assistants with real analysts.
+- Study of human-AI interaction designs for investment decisions.</p>
+  </div>
+</details>
+
+
+<hr class="section">
+
+### [Cao, S. S., Jiang, W., Yang, B., & Zhang, A. (2020). How to Talk When a Machine is Listening: Corporate Disclosure in the Age of AI. SSRN.](https://academic.oup.com/rfs/article-abstract/36/9/3603/7087110)
+**Year:** 2020  **Category:** Corporate disclosure / NLP
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Studies how corporate disclosure strategies change when firms anticipate machine-based text processing; analyzes disclosure wording and informativeness.</p>
+    <p><strong>Data Used:</strong> Corporate filings and disclosure texts, market reactions.</p>
+    <p><strong>Challenges / Limitations:</strong> - Measuring firms' anticipatory behavior is difficult and may be confounded by other disclosure incentives.
+- NLP model evolution over time affects measured behavior.</p>
+    <p><strong>Future Research Directions:</strong> Longitudinal analyses as NLP models change.
+- Experimental approaches to detect strategic disclosure.</p>
+  </div>
+</details>
+
+
+<hr class="section">
+
+### [Chaudhry, A., & Oh, S. (2020). High-Frequency Expectations from Asset Prices: A Machine Learning Approach. SSRN.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3694019)
+**Year:** 2020  **Category:** High-frequency / microstructure ML
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Uses ML to extract high-frequency expectations embedded in asset prices, leveraging intraday data and novel feature engineering.</p>
+    <p><strong>Data Used:</strong> High-frequency intraday price and order-book data (see paper).</p>
+    <p><strong>Challenges / Limitations:</strong> Microstructure noise and data-cleaning are crucial and challenging.
+- Overfitting to intraday patterns that are ephemeral.
+- Scalability and latency in real-time systems.</p>
+    <p><strong>Future Research Directions:</strong> Robustness to microstructure frictions and different sampling frequencies.
+- Integration with execution-aware strategies.</p>
+  </div>
+</details>
 
 
 <hr class="section">
@@ -693,14 +546,29 @@ which the individual excess returns are calculated.</p>
 </details>
 
 
+<hr class="section">
 
-## Uncategorized
+### [Chernozhukov, V., Chetverikov, D., Demirer, M., Duflo, E., Hansen, C., Newey, W., & Robins, J. (2018). Double/debiased machine learning for treatment and structural parameters. Econometrics Journal.](Journal: https://academic.oup.com/ectj/article/21/1/C1/5052706 ; arXiv/SSRN available.)
+**Year:** 2018  **Category:** Methodology / inference with ML
+
+
+<details class="paper-details">
+  <summary><strong>View Details</strong></summary>
+  <div class="content-block">
+    <p><strong>Summary:</strong> Introduces the Double/Debiased Machine Learning framework to obtain valid inference on low-dimensional parameters in the presence of high-dimensional nuisance functions estimated by ML methods.</p>
+    <p><strong>Data Used:</strong> Methodological paper (applies to many datasets; theoretical and empirical examples included).</p>
+    <p><strong>Challenges / Limitations:</strong> - Requires regularity conditions and sample-splitting; finite-sample performance can vary.
+- Implementation choices (cross-fitting folds, ML learners) affect results.</p>
+    <p><strong>Future Research Directions:</strong>  Better finite-sample corrections and guidance for practitioner choices.
+- Extend frameworks to time-series dependence common in finance.</p>
+  </div>
+</details>
 
 
 <hr class="section">
 
 ### Chhaochharia, V., Kumar, A., Murali, S., & Rantala, V. (2021). Aggregating Artificially Intelligent Earnings Forecasts. SSRN Electronic Journal.
-**Year:** 2021  **Category:** Uncategorized
+**Year:** 2021  **Category:** nan
 
 
 <details class="paper-details">
@@ -717,7 +585,7 @@ which the individual excess returns are calculated.</p>
 <hr class="section">
 
 ### Chinco, A., Clark‚ÄêJoseph, A. D., & Ye, M. (2018). Sparse Signals in the Cross‚ÄêSection of Returns. The Journal of Finance, 74, 449-492.
-**Year:** 2018  **Category:** Uncategorized
+**Year:** 2018  **Category:** nan
 
 
 <details class="paper-details">
@@ -734,7 +602,7 @@ which the individual excess returns are calculated.</p>
 <hr class="section">
 
 ### Cong, L., Tang, K., Wang, J., & Zhang, Y. (2020). Deep Sequence Modeling: Development and Applications in Asset Pricing. SSRN Electronic Journal.
-**Year:** 2020  **Category:** Uncategorized
+**Year:** 2020  **Category:** nan
 
 
 <details class="paper-details">
@@ -755,7 +623,7 @@ which the individual excess returns are calculated.</p>
 <hr class="section">
 
 ### [Dautel, A. J., H√§rdle, W. K., Lessmann, S., & Seow, H.-V. (2020). Forex exchange rate forecasting using deep recurrent neural networks. Digital Finance.](https://link.springer.com/article/10.1007/s42521-020-00019-x)
-**Year:** 2020  **Category:** Uncategorized
+**Year:** 2020  **Category:** nan
 
 
 <details class="paper-details">
@@ -776,7 +644,7 @@ which the individual excess returns are calculated.</p>
 <hr class="section">
 
 ### [DeMiguel, V., Gil-Bazo, J., Nogales, F. J., & A. P. Santos, A. (2021). Machine learning and fund characteristics help to select mutual funds with positive alpha. Journal of Financial Economics (2023)](https://www.sciencedirect.com/science/article/pii/S0304405X23001770)
-**Year:** 2023  **Category:** Uncategorized
+**Year:** 2023  **Category:** nan
 
 
 <details class="paper-details">
@@ -797,7 +665,7 @@ which the individual excess returns are calculated.</p>
 <hr class="section">
 
 ### [Easley, D., López de Prado, M., O’Hara, M., & Zhang, Z. (2020). Microstructure in the Machine Age. Review of Financial Studies.](https://academic.oup.com/rfs/article-abstract/34/7/3316/5868424)
-**Year:** 2021  **Category:** Uncategorized
+**Year:** 2021  **Category:** nan
 
 
 <details class="paper-details">
@@ -824,7 +692,7 @@ Real-time, adaptive models that explicitly optimize execution-aware objectives.<
 <hr class="section">
 
 ### [Edmans, A., Fernandez-Perez, A., Garel, A., & Indriawan, I. (2021). Music sentiment and stock returns around the world. Journal of Financial Economics.](https://www.sciencedirect.com/science/article/abs/pii/S0304405X21003718)
-**Year:** 2021  **Category:** Uncategorized
+**Year:** 2021  **Category:** nan
 
 
 <details class="paper-details">
@@ -849,7 +717,7 @@ Test intra-country heterogeneity (regions, age groups) and impact on specific se
 <hr class="section">
 
 ### [Engle, R. F., Giglio, S., Kelly, B., Lee, H., & Stroebel, J. (2020). The Review of Financial Studies. The Review Of Financial Studies, 33, 1184-1216.](https://academic.oup.com/rfs/article-abstract/33/3/1184/5735305)
-**Year:** 2020  **Category:** Uncategorized
+**Year:** 2020  **Category:** nan
 
 
 <details class="paper-details">
@@ -874,7 +742,7 @@ Evaluation of hedges under stress scenarios and long-horizon climate risks.</p>
 <hr class="section">
 
 ### [Erel, I., Stern, L. H., Tan, C., & Weisbach, M. S. (2021). Selecting Directors Using Machine Learning. The Review of Financial Studies, 34, 3226-3264.](https://academic.oup.com/rfs/article-abstract/34/7/3226/6239715?redirectedFrom=fulltext)
-**Year:** 2021  **Category:** Uncategorized
+**Year:** 2021  **Category:** nan
 
 
 <details class="paper-details">
@@ -899,7 +767,7 @@ Link predicted director characteristics to long-run corporate outcomes (beyond s
 <hr class="section">
 
 ### [Evgeniou, T., Guecioueur, A., & Prieto, R. (2020). Modeling Heterogeneity in Firm-level Return Predictability with Machine Learning. Journal of Financial and Quantitative Analysis.](https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/abs/uncovering-sparsity-and-heterogeneity-in-firmlevel-return-predictability-using-machine-learning/1B70137EF297066928918332AE663B24)
-**Year:** 2020  **Category:** Uncategorized
+**Year:** 2020  **Category:** nan
 
 
 <details class="paper-details">
@@ -924,7 +792,7 @@ Evaluate economic value net of realistic transaction costs.</p>
 <hr class="section">
 
 ### [Feng, G., Polson, N., & Xu, J. (2021). Deep Learning in Characteristics-Sorted Factor Models. Journal of Financial and Quantitative Analysis](https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/abs/deep-learning-in-characteristicssorted-factor-models/DD410814792E49E271957E8C87C1D763)
-**Year:** 2021  **Category:** Uncategorized
+**Year:** 2021  **Category:** nan
 
 
 <details class="paper-details">
@@ -949,7 +817,7 @@ Hybrid models that incorporate economic constraints (e.g., no-arbitrage penaltie
 <hr class="section">
 
 ### [Fuster, A., Goldsmith‚ÄêPinkham, P., Ramadorai, T., & Walther, A. (2021). Predictably Unequal? The Effects of Machine Learning on Credit Markets. The Journal of Finance, 77, 5-47.](https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13090)
-**Year:** 2021  **Category:** Uncategorized
+**Year:** 2021  **Category:** nan
 
 
 <details class="paper-details">
@@ -974,7 +842,7 @@ Cross-country studies to see how regulatory environments moderate ML’s effects
 <hr class="section">
 
 ### [Goldstein, I., Spatt, C. S., & Ye, M. (2021). Big Data in Finance. The Review of Financial Studies.](https://academic.oup.com/rfs/article/34/7/3213/6210658)
-**Year:** 2021  **Category:** Uncategorized
+**Year:** 2021  **Category:** nan
 
 
 <details class="paper-details">
@@ -995,7 +863,7 @@ Development of reproducible benchmark datasets and open toolchains for big-data 
 <hr class="section">
 
 ### Gopalakrishna, G. (2020). Asset Pricing with Realistic Crises Dynamics. SSRN
-**Year:** 2024  **Category:** Uncategorized
+**Year:** 2024  **Category:** nan
 
 
 <details class="paper-details">
@@ -1020,7 +888,7 @@ Policy experiments within the model (capital injections, resolution regimes) to 
 <hr class="section">
 
 ### [Goyenko, R., & Zhang, C. (2020). The Joint Cross Section of Option and Stock Returns Predictability with Big Data and Machine Learning. SSRN Electronic Journal.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3747238)
-**Year:** 2020  **Category:** Uncategorized
+**Year:** 2020  **Category:** nan
 
 
 <details class="paper-details">
@@ -1041,7 +909,7 @@ Policy experiments within the model (capital injections, resolution regimes) to 
 <hr class="section">
 
 ### [Hafner, C. M., & Wang, L. (2022). Dynamic portfolio selection with sector-specific regularization. Econometrics and Statistics.](https://www.sciencedirect.com/science/article/abs/pii/S2452306222000016)
-**Year:** 2022  **Category:** Uncategorized
+**Year:** 2022  **Category:** nan
 
 
 <details class="paper-details">
@@ -1072,7 +940,7 @@ Develop Bayesian or fully probabilistic sector-regularized portfolio estimators 
 <hr class="section">
 
 ### [Hassan, T. A., Hollander, S., van Lent, L., & Tahoun, A. (2019). Firm-Level Political Risk: Measurement and Effects. The Quarterly Journal of Economics, 134, 2135-2202.](https://academic.oup.com/qje/article-abstract/134/4/2135/5531768)
-**Year:** 2019  **Category:** Uncategorized
+**Year:** 2019  **Category:** nan
 
 
 <details class="paper-details">
@@ -1105,7 +973,7 @@ Combine text-based political-risk measures with other alternative-data sources (
 <hr class="section">
 
 ### [Hu, A., & Ma, S. (2020). Persuading Investors: A Video-Based Study . SSRN Electronic Journal.](https://www.nber.org/papers/w29048)
-**Year:** 2020  **Category:** Uncategorized
+**Year:** 2020  **Category:** nan
 
 
 <details class="paper-details">
@@ -1136,7 +1004,7 @@ Combine video-derived measures with investor-level heterogeneity (e.g., experien
 <hr class="section">
 
 ### Israel, R., Kelly, B. T., & Moskowitz, T. J. (2020). Can Machines Learn Finance? SSRN Electronic Journal.
-**Year:** 2020  **Category:** Uncategorized
+**Year:** 2020  **Category:** nan
 
 
 <details class="paper-details">
@@ -1161,7 +1029,7 @@ Research on how large pre-trained models (e.g., LLMs) can be adapted responsibly
 <hr class="section">
 
 ### [Kan, R., Wang, X., & Zheng, X. (2019). In-Sample and Out-of-Sample Sharpe Ratios of Multi-Factor Asset Pricing Models. Journal of Financial Economics](https://www.sciencedirect.com/science/article/abs/pii/S0304405X24000606)
-**Year:** 2019  **Category:** Uncategorized
+**Year:** 2019  **Category:** nan
 
 
 <details class="paper-details">
@@ -1188,7 +1056,7 @@ Link Sharpe-bias corrections to utility-based metrics to evaluate economic (not 
 <hr class="section">
 
 ### Karolyi, G. A., & Van Nieuwerburgh, S. (2020). New Methods for the Cross-Section of Returns. The Review of Financial Studies, 33, 1879-1890.
-**Year:** 2020  **Category:** Uncategorized
+**Year:** 2020  **Category:** nan
 
 
 <details class="paper-details">
@@ -1209,7 +1077,7 @@ Work on replicability standards and vintage-data benchmarks for ML in asset pric
 <hr class="section">
 
 ### [Katsafados, A. G., Androutsopoulos, I., Chalkidis, I., Fergadiotis, E., Leledakis, G. N., & Pyrgiotakis, E. G. (2020). Textual Information and IPO Underpricing: A Machine Learning Approach. SSRN Electronic Journal.](https://www.pm-research.com/content/iijjfds/5/2/100)
-**Year:** 2023  **Category:** Uncategorized
+**Year:** 2023  **Category:** nan
 
 
 <details class="paper-details">
@@ -1238,7 +1106,7 @@ Cross-country comparisons to study language and disclosure regime effects.</p>
 <hr class="section">
 
 ### [Ke, Zheng Tracy, et al. Predicting Returns with Text Data. (2020) Available at SSRN: https://ssrn.com/abstract=3389884.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3389884)
-**Year:** 2020  **Category:** Uncategorized
+**Year:** 2020  **Category:** nan
 
 
 <details class="paper-details">
@@ -1267,7 +1135,7 @@ Development of public benchmark datasets for text+returns tasks.</p>
 <hr class="section">
 
 ### [Kelly, liyan T., et al. (2023) The Virtue of Complexity in Machine Learning Portfolios. Journal of Finance](https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.13298)
-**Year:** 2023  **Category:** Uncategorized
+**Year:** 2023  **Category:** nan
 
 
 <details class="paper-details">
@@ -1294,7 +1162,7 @@ Balance complexity benefits with explainability methods designed for portfolio m
 <hr class="section">
 
 ### [Kolm, P. N., Turiel, J., & Westray, N. (2021). Deep Order Flow Imbalance: Extracting Alpha at Multiple Horizons from the Limit Order Book.Mathematical Finance,](https://onlinelibrary.wiley.com/doi/10.1111/mafi.12413)
-**Year:** 2021  **Category:** Uncategorized
+**Year:** 2021  **Category:** nan
 
 
 <details class="paper-details">
@@ -1321,7 +1189,7 @@ Explore interpretability of learned imbalance filters to link to economic liquid
 <hr class="section">
 
 ### [Kwan, A., Philip, R., & Shkilko, A. (2020). The Conduits of Price Discovery: A Machine Learning Approach. SSRN Electronic Journal.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3710491)
-**Year:** 2020  **Category:** Uncategorized
+**Year:** 2020  **Category:** nan
 
 
 <details class="paper-details">
@@ -1346,7 +1214,7 @@ Extend to cross-border price-discovery studies with consolidated tick data.</p>
 <hr class="section">
 
 ### [Lee, G. M., Naughton, J. P., Zheng, X., & Zhou, D. (2020). Predicting Litigation Risk via Machine Learning. SSRN Electronic Journal.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3740954)
-**Year:** 2020  **Category:** Uncategorized
+**Year:** 2020  **Category:** nan
 
 
 <details class="paper-details">
@@ -1373,7 +1241,7 @@ Integration with auditor workflow and cost-sensitive learning to manage false-po
 <hr class="section">
 
 ### [Li, K., Mai, F., Shen, R., & Yan, X. (2020). Measuring Corporate Culture Using Machine Learning. The Review of Financial Studies.](https://academic.oup.com/rfs/article-abstract/34/7/3265/5869446)
-**Year:** 2020  **Category:** Uncategorized
+**Year:** 2020  **Category:** nan
 
 
 <details class="paper-details">
@@ -1402,7 +1270,7 @@ Use network or social-media data to enrich culture metrics.</p>
 <hr class="section">
 
 ### [Liu, Y., Zhou, G., & Zhu, Y. (2020). Maximizing the Sharpe Ratio: A Genetic Programming Approach. SSRN Electronic Journal.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3726609)
-**Year:** 2020  **Category:** Uncategorized
+**Year:** 2020  **Category:** nan
 
 
 <details class="paper-details">
@@ -1427,7 +1295,7 @@ Hybrid GP + ensemble methods combining symbolic rules with statistical learners.
 <hr class="section">
 
 ### [Loughran, T., & McDonald, B. (2020). Measuring Firm Complexity. .Journal of Financial and Quantitative Analysis](https://doi.org/10.1017/S0022109023000716)
-**Year:** 2023  **Category:** Uncategorized
+**Year:** 2023  **Category:** nan
 
 
 <details class="paper-details">
@@ -1452,7 +1320,7 @@ Study how complexity interacts with investor heterogeneity (institutional vs ret
 <hr class="section">
 
 ### [Martin, I. W. R., & Nagel, S. (2021). Market efficiency in the age of big data. Journal of Financial Economics.](https://www.sciencedirect.com/science/article/pii/S0304405X21004566)
-**Year:** 2021  **Category:** Uncategorized
+**Year:** 2021  **Category:** nan
 
 
 <details class="paper-details">
@@ -1477,7 +1345,7 @@ Experiments on how coordinated use of common alternative-data signals affects vo
 <hr class="section">
 
 ### [Moritz, B., & Zimmermann, T. (2016). Tree-Based Conditional Portfolio Sorts: The Relation between Past and Future Stock Returns. SSRN Electronic Journal.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2740751)
-**Year:** 2016  **Category:** Uncategorized
+**Year:** 2016  **Category:** nan
 
 
 <details class="paper-details">
@@ -1502,7 +1370,7 @@ Apply the method to cross-asset settings (bonds, options) for conditional anomal
 <hr class="section">
 
 ### [Rapach, D., & Zhou, G. (2019). Time-Series and Cross-Sectional Stock Return Forecasting: New Machine Learning Methods. SSRN Electronic Journal.](https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119751182.ch1)
-**Year:** 2019  **Category:** Uncategorized
+**Year:** 2019  **Category:** nan
 
 
 <details class="paper-details">
@@ -1522,7 +1390,7 @@ Apply the method to cross-asset settings (bonds, options) for conditional anomal
 <hr class="section">
 
 ### [Rapach, D., & Zhou, G. (2021). Asset Pricing: Time-Series Predictability. SSRN Electronic Journal.](https://oxfordre.com/economics/display/10.1093/acrefore/9780190625979.001.0001/acrefore-9780190625979-e-777)
-**Year:** 2021  **Category:** Uncategorized
+**Year:** 2021  **Category:** nan
 
 
 <details class="paper-details">
@@ -1551,7 +1419,7 @@ Investigate regime-switching deep learning models for adaptive predictability.</
 <hr class="section">
 
 ### [Richmond, R. J. (2019). Trade Network Centrality and Currency Risk Premia. The Journal of Finance, 74, 1315-1361.](https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.12755)
-**Year:** 2019  **Category:** Uncategorized
+**Year:** 2019  **Category:** nan
 
 
 <details class="paper-details">
@@ -1580,7 +1448,7 @@ Incorporate ML-based dynamic network models for real-time monitoring.</p>
 <hr class="section">
 
 ### [Song, S. (2021). The Informational Value of Segment Data Disaggregated by Underlying Industry: Evidence from the Textual Features of Business Descriptions. The Accounting Review.](https://doi.org/10.2308/TAR-2017-0572)
-**Year:** 2021  **Category:** Uncategorized
+**Year:** 2021  **Category:** nan
 
 
 <details class="paper-details">
@@ -1609,7 +1477,7 @@ Combine textual features with structured ESG data for integrated valuation.</p>
 <hr class="section">
 
 ### [Tobek, O., & Hronec, M. (2021). Does it pay to follow anomalies research? Machine learning approach with international evidence. Journal of Financial Markets, 56, 100588.](https://doi.org/10.1016/j.finmar.2020.100588)
-**Year:** 2021  **Category:** Uncategorized
+**Year:** 2021  **Category:** nan
 
 
 <details class="paper-details">
@@ -1638,7 +1506,7 @@ Investigate anomaly interactions under transaction cost constraints.</p>
 <hr class="section">
 
 ### [van Binsbergen, J. H., Han, X., & Lopez-Lira, A. (2020). Man vs. Machine Learning: The Term Structure of Earnings Expectations and Conditional Biases. SSRN Electronic Journal.](https://academic.oup.com/rfs/article/36/6/2361/6782974)
-**Year:** 2022  **Category:** Uncategorized
+**Year:** 2022  **Category:** nan
 
 
 <details class="paper-details">
@@ -1659,7 +1527,7 @@ Investigate anomaly interactions under transaction cost constraints.</p>
 <hr class="section">
 
 ### [Wu, W., Chen, J., Yang, Z. (Ben), & Tindall, M. L. (2021). A Cross-Sectional Machine Learning Approach for Hedge Fund Return Prediction and Selection. Management Science, 67, 4577-4601.](https://pubsonline.informs.org/doi/10.1287/mnsc.2020.3696)
-**Year:** 2021  **Category:** Uncategorized
+**Year:** 2021  **Category:** nan
 
 
 <details class="paper-details">
@@ -1680,7 +1548,7 @@ Investigate anomaly interactions under transaction cost constraints.</p>
 <hr class="section">
 
 ### [Xiong, R., & Pelger, M. (2019). Large Dimensional Latent Factor Modeling with Missing Observations and Applications to Causal Inference. SSRN Electronic Journal.](https://www.sciencedirect.com/science/article/abs/pii/S0304407622000914)
-**Year:** 2019  **Category:** Uncategorized
+**Year:** 2019  **Category:** nan
 
 
 <details class="paper-details">
@@ -1701,7 +1569,7 @@ Investigate anomaly interactions under transaction cost constraints.</p>
 <hr class="section">
 
 ### Zhang, Z., Zohren, S., & Roberts, S. (2019). DeepLOB: Deep Convolutional Neural Networks for Limit Order Books. IEEE Transactions on Signal Processing, 1-1.
-**Year:** 2019  **Category:** Uncategorized
+**Year:** 2019  **Category:** nan
 
 
 <details class="paper-details">
@@ -1722,7 +1590,7 @@ Investigate anomaly interactions under transaction cost constraints.</p>
 <hr class="section">
 
 ### [Zhu, C. (2019). Big Data as a Governance Mechanism. The Review of Financial Studies, 32, 2021-2061.](https://academic.oup.com/rfs/article/32/5/2021/5427775)
-**Year:** 2019  **Category:** Uncategorized
+**Year:** 2019  **Category:** nan
 
 
 <details class="paper-details">
@@ -1740,8 +1608,6 @@ Investigate anomaly interactions under transaction cost constraints.</p>
 </details>
 
 
+
 ---
-
-
-
-
+<p style='text-align:center;color:gray;font-size:0.9em;'>Generated automatically for academic literature review purposes.</p>

@@ -1,5 +1,8 @@
-# 🧠 Machine Learning in Asset Pricing — Literature Review
 
+The goal of this initiative is to read, analyze, and summarize research papers in the field of Machine Learning applications in Asset Pricing.
+For an interactive reading experience, please visit the project’s [GitHub Page](https://ajim63.github.io/Machine-Learning-in-Asset-Pricing-Papers/).
+
+If you find this repository helpful, consider giving it a ⭐ — your support encourages us to keep the collection updated regularly.
 
 
 ## Table of Contents

@@ -112,6 +112,82 @@ Each entry includes collapsible sections with summaries, data details, limitatio
 - Combine video-derived measures with investor-level heterogeneity (e.g., experience, risk aversion) to personalize persuasion models.\
 
 </details>
+
+
+
+---
+
+### [Martin, I. W. R., & Nagel, S. (2021). Market efficiency in the age of big data. Journal of Financial Economics.](https://www.sciencedirect.com/science/article/pii/S0304405X21004566)
+**Year:** 2021  **Category:** Alternative Data
+
+
+<details>
+  <summary><strong>Click to expand details</strong></summary>
+
+  <br>
+
+  <strong><span style="color:#1E88E5">🟦 Summary</span></strong>  
+  Martin & Nagel analyze how the availability of massive, granular data interacts with market efficiency, arguing that bigger data can both uncover previously hidden predictive signals and accelerate their arbitrage away, affecting the dynamic of inefficiencies. They combine theoretical modeling with empirical tests that leverage expanded datasets (textual data, high-frequency microstructure, alternative indicators) to examine whether and how markets incorporate information from large-scale sources. The authors document that while big data can improve ex-ante predictability for certain short horizons, practical frictions (transaction costs, capacity limits, and crowding) prevent instant exploitation, thereby leaving room for economically meaningful persistence. They also show that big-data-driven strategies can amplify volatility during stress periods if many agents react to the same signals simultaneously. Martin & Nagel stress the importance of distinguishing statistical predictability from economic arbitrageability and propose measures for testing efficiency in presence of high-dimensional signals. Policy and market-design implications are discussed, including data-access asymmetries and platform effects. Overall, the contribution is to bring a balanced analytical framework to assess the impact of big data on finance, combining normative concerns with empirical evidence.
+
+  <br><br>
+
+  <strong><span style="color:#43A047">🟩 Data Used</span></strong>  
+  - Diverse large datasets: textual news corpora, high-frequency trade data, alternative data (satellite, transaction), and standard return series for empirical illustrations.
+- Simulations and calibrated models to assess arbitrage dynamics.
+
+  <br><br>
+
+  <strong><span style="color:#FB8C00">🟧 Challenges / Limitations</span></strong>  
+  - Empirical results can be sensitive to the particular big-data sources selected.
+- Measuring “arbitrageability” in practice requires strong assumptions about agents’ strategies and capacity.
+- Policy recommendations depend on regulatory and market-structure specifics.
+
+  <br><br>
+
+  <strong><span style="color:#8E24AA">🟪 Future Research Directions</span></strong>  
+  - Empirical work quantifying data-access inequality and its implications for market fairness.
+- Experiments on how coordinated use of common alternative-data signals affects volatility and liquidity.
+
+</details>
+
+
+
+---
+
+### [Erel, I., Stern, L. H., Tan, C., & Weisbach, M. S. (2021). Selecting Directors Using Machine Learning. The Review of Financial Studies, 34, 3226-3264.](https://academic.oup.com/rfs/article-abstract/34/7/3226/6239715?redirectedFrom=fulltext)
+**Year:** 2021  **Category:** Alternative Data
+
+
+<details>
+  <summary><strong>Click to expand details</strong></summary>
+
+  <br>
+
+  <strong><span style="color:#1E88E5">🟦 Summary</span></strong>  
+  The authors apply machine-learning methods to predict director effectiveness and shareholder approval outcomes and compare algorithmic (ML-suggested) director slates with management’s choices. Their results suggest ML can identify director candidates more likely to gain shareholder approval and who would perform better on certain outcome measures, highlighting biases in current selection practices.
+
+  <br><br>
+
+  <strong><span style="color:#43A047">🟩 Data Used</span></strong>  
+  - Director candidate characteristics (demographics, experience, networks), director election outcomes, firm performance and governance data, possibly board-level covariates
+
+  <br><br>
+
+  <strong><span style="color:#FB8C00">🟧 Challenges / Limitations</span></strong>  
+  - Outcome labels (e.g., “good director”) are noisy and depend on the performance metrics chosen.
+- ML predictions may reinforce existing biases if training labels or features reflect historical discrimination.
+- Practical adoption interacts with legal/regulatory constraints and firms’ governance incentives.
+
+  <br><br>
+
+  <strong><span style="color:#8E24AA">🟪 Future Research Directions</span></strong>  
+  - Fairness-aware ML for director selection (mitigate demographic or network-based bias).
+- Field experiments or pilot deployments to evaluate ML-assisted director search in practice.
+- Link predicted director characteristics to long-run corporate outcomes (beyond short-term approval)
+
+</details>
+
+
 ---
 
 <p align="center">

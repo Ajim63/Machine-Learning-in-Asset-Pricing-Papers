@@ -14,10 +14,10 @@ This purpose of this initiative to provide a conmphesive repo for the subject ar
 |[Leippold, Markus, Qian Wang, and Wenyu Zhou. "Machine learning in the Chinese stock market." Journal of Financial Economics 145, no. 2 (2022): 64-82](https://www.sciencedirect.com/science/article/pii/S0304405X21003743)  |         |        |            |
 
 
-# Machine Learning in Asset Pricing — Literature Review
+# 🧠 Machine Learning in Asset Pricing — Literature Review
 
 A curated academic literature collection on **machine learning applications in asset pricing**.  
-Each entry includes collapsible sections with summaries, data descriptions, limitations, and future directions.
+Each entry includes collapsible sections with summaries, data details, limitations, and future directions — all styled for readability.
 
 ## Table of Contents
 
@@ -47,25 +47,27 @@ Each entry includes collapsible sections with summaries, data descriptions, limi
 <details>
   <summary><strong>Click to expand details</strong></summary>
 
-  **Summary:**  
+  <br>
+
+  <strong><span style="color:#1E88E5">🟦 Summary</span></strong>  
   Zhu studies whether access to alternative 'big data' affects price informativeness and corporate governance. Greater big-data availability is associated with more informative prices and disciplining effects on managerial actions.
 
-  <br>
+  <br><br>
 
-  **Data Used:**  
-  Firm-level governance & performance measures; proxies for alternative data adoption; stock price informativeness metrics.
+  <strong><span style="color:#43A047">🟩 Data Used</span></strong>  
+  - Firm-level governance & performance measures; proxies for alternative data adoption; stock price informativeness metrics.
 
-  <br>
+  <br><br>
 
-  **Challenges / Limitations:**  
-  Measuring firms’ access to alternative data relies on indirect proxies.
+  <strong><span style="color:#FB8C00">🟧 Challenges / Limitations</span></strong>  
+  - Measuring firms’ access to alternative data relies on indirect proxies.
 - Causal identification is difficult due to unobserved firm differences.
 - Generalizability beyond large public firms is uncertain.
 
-  <br>
+  <br><br>
 
-  **Future Research Directions:**  
-  Use direct adoption measures via procurement records.
+  <strong><span style="color:#8E24AA">🟪 Future Research Directions</span></strong>  
+  - Use direct adoption measures via procurement records.
 - Apply difference-in-differences around adoption events.
 - Study real decision impacts and privacy implications.
 
@@ -82,40 +84,34 @@ Each entry includes collapsible sections with summaries, data descriptions, limi
 <details>
   <summary><strong>Click to expand details</strong></summary>
 
-  **Summary:**  
+  <br>
+
+  <strong><span style="color:#1E88E5">🟦 Summary</span></strong>  
   Hu & Ma study how nonverbal and delivery-related features in pitch videos affect investor decisions, exploiting a large dataset of startup pitch videos (e.g., accelerator applications) merged with subsequent funding outcomes. They extract multimodal features from video — facial expressions, vocal tone, gestural dynamics — using computer-vision and audio-processing ML pipelines, and construct composite metrics of persuasiveness (warmth, passion, confidence). The authors then relate these quantified delivery features to investor actions (funding probability, amount) while controlling for textual content and firm fundamentals, isolating the incremental effect of presentation style. They find that positive delivery characteristics (enthusiasm, warmth) increase the likelihood of obtaining funding, but conditional on funding, those with excessive positivity may underperform later — suggesting a trade-off between persuasion and information quality. The paper carefully addresses selection concerns (which startups choose to publish videos) and shows robustness across different investor groups and pitch contexts. Methodologically, the work illustrates how modern ML tools for video/audio feature extraction can be rigorously combined with econometric designs to identify behavioral effects in financial settings. The authors also discuss privacy and ethical considerations around using video and biometric-like measures for economic decisions. The dataset and code usually accompany the working-paper release to facilitate replication.
 
-  <br>
+  <br><br>
 
-  **Data Used:**  
-  Pitch videos from accelerators / crowdfunding platforms or VC pitch archives (raw video and audio).
+  <strong><span style="color:#43A047">🟩 Data Used</span></strong>  
+  - Pitch videos from accelerators / crowdfunding platforms or VC pitch archives (raw video and audio).
+- Firm-level meta-data (founder characteristics, business descriptions) and subsequent funding outcomes (dates, amounts).
+- Preprocessing: face-tracking, voice-feature extraction (prosody), and natural-language transcripts (ASR) to separate delivery vs content.
 
-Firm-level meta-data (founder characteristics, business descriptions) and subsequent funding outcomes (dates, amounts).
+  <br><br>
 
-Preprocessing: face-tracking, voice-feature extraction (prosody), and natural-language transcripts (ASR) to separate delivery vs content.
+  <strong><span style="color:#FB8C00">🟧 Challenges / Limitations</span></strong>  
+  - Sample selection: startups that record and share video pitches may differ systematically from those that don’t.
+- Video/audio processing may be sensitive to recording quality, camera angle, and background noise, potentially biasing feature extraction.
+- Ethical/privacy issues: inferring traits from video may raise consent and fairness concerns if used in hiring/financing decisions.
+- Causal inference: while the paper controls for many observables, unobserved attributes correlated with both delivery style and success remain plausible.
 
-  <br>
+  <br><br>
 
-  **Challenges / Limitations:**  
-  Sample selection: startups that record and share video pitches may differ systematically from those that don’t.
-
-Video/audio processing may be sensitive to recording quality, camera angle, and background noise, potentially biasing feature extraction.
-
-Ethical/privacy issues: inferring traits from video may raise consent and fairness concerns if used in hiring/financing decisions.
-
-Causal inference: while the paper controls for many observables, unobserved attributes correlated with both delivery style and success remain plausible.
-
-  <br>
-
-  **Future Research Directions:**  
-  Field experiments randomizing video exposure or coaching to test causal effects of delivery on investment decisions.
-
-Cross-platform and cross-country tests to study cultural differences in delivery effectiveness.
-
-Combine video-derived measures with investor-level heterogeneity (e.g., experience, risk aversion) to personalize persuasion models.\
+  <strong><span style="color:#8E24AA">🟪 Future Research Directions</span></strong>  
+  - Field experiments randomizing video exposure or coaching to test causal effects of delivery on investment decisions.
+- Cross-platform and cross-country tests to study cultural differences in delivery effectiveness.
+- Combine video-derived measures with investor-level heterogeneity (e.g., experience, risk aversion) to personalize persuasion models.\
 
 </details>
-
 ---
 
 <p align="center">

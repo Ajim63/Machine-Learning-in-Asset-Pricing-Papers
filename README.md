@@ -1,5 +1,7 @@
 # 🧠 Machine Learning in Asset Pricing — Literature Review
 
+
+
 ## Table of Contents
 
 - [Alternative Data](#alternative-data)
@@ -1492,7 +1494,7 @@
 
 ---
 
-### <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304407620301998 ; SSRN: https://ssrn.com/abstract=3335536" target="_blank">Gu, Shihao, Bryan Kelly, and Dacheng Xiu. Autoencoder asset pricing models. Journal of Econometrics (2021).</a>
+### <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304407620301998 ; SSRN: https://ssrn.com/abstract=3335536" target="_blank">Gu, Shihao, Bryan Kelly, and Dacheng Xiu. Autoencoder asset pricing models. Journal of Econometrics</a>
 **Year:** 2021  **Category:** Latent Factor Model
 
 
@@ -2280,7 +2282,7 @@
 
 ---
 
-### <a href="SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3446225 ; Journal link: https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.13377" target="_blank">Bybee, L., Kelly, B., Manela, A. (2021). Business News and Business Cycles</a>
+### <a href="https://doi.org/10.1111/jofi.13377" target="_blank">Bybee, Leland, Bryan Kelly, Asaf Manela, and Dacheng Xiu. Business news and business cycles. The Journal of Finance 79, no. 5 (2024): 3105-3147.</a>
 **Year:** 2024  **Category:** NLP
 
 
@@ -2365,7 +2367,7 @@
 
 ---
 
-### <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119751182.ch1" target="_blank">Rapach, D., & Zhou, G. (2019). Time-Series and Cross-Sectional Stock Return Forecasting: New Machine Learning Methods. SSRN Electronic Journal.</a>
+### <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119751182.ch1" target="_blank">Rapach, D., & Zhou, G. (2019). Time-Series and Cross-Sectional Stock Return Forecasting: New Machine Learning Methods.</a>
 **Year:** 2019  **Category:** Survey
 
 
@@ -2402,7 +2404,7 @@
 
 ---
 
-### Karolyi, G. A., & Van Nieuwerburgh, S. (2020). New Methods for the Cross-Section of Returns. The Review of Financial Studies, 33, 1879-1890.
+### <a href="https://doi.org/10.1093/rfs/hhaa019" target="_blank">Karolyi, G. A., & Van Nieuwerburgh, S. (2020). New Methods for the Cross-Section of Returns. The Review of Financial Studies, 33, 1879-1890.</a>
 **Year:** 2020  **Category:** Survey
 
 
@@ -2438,7 +2440,7 @@
 
 ---
 
-### Israel, R., Kelly, B. T., & Moskowitz, T. J. (2020). Can Machines Learn Finance? SSRN Electronic Journal.
+### <a href="http://dx.doi.org/10.2139/ssrn.3624052" target="_blank">Israel, R., Kelly, B. T., & Moskowitz, T. J. (2020). Can Machines Learn Finance? Journal of Investment Management.</a>
 **Year:** 2020  **Category:** Survey
 
 
@@ -2476,7 +2478,7 @@
 
 ---
 
-### <a href="https://oxfordre.com/economics/display/10.1093/acrefore/9780190625979.001.0001/acrefore-9780190625979-e-777" target="_blank">Rapach, D., & Zhou, G. (2021). Asset Pricing: Time-Series Predictability. SSRN Electronic Journal.</a>
+### <a href="https://oxfordre.com/economics/display/10.1093/acrefore/9780190625979.001.0001/acrefore-9780190625979-e-777" target="_blank">Rapach, D., & Zhou, G. (2021). Asset Pricing: Time-Series Predictability. Economics and Finance</a>
 **Year:** 2021  **Category:** Survey
 
 
@@ -2551,4 +2553,3 @@
 
 
 ---
-
